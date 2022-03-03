@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/youngsolutions/android/pruebasCovid/app/src/main/res/layout/activity_alta_usuario2.xml" value="0.1" />
+        <entry key="..\:/youngsolutions/android/pruebasCovid/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/youngsolutions/android/pruebasCovid/app/src/main/res/layout/activity_principal_usuario.xml" value="0.12182971014492754" />
+        <entry key="..\:/youngsolutions/android/pruebasCovid/app/src/main/res/layout/activity_usuarios.xml" value="0.12182971014492754" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.30522765598650925" />
         <entry key="app/src/main/res/layout/activity_principal_usuario.xml" value="0.2513586956521739" />
         <entry key="app/src/main/res/layout/activity_usuarios.xml" value="0.165" />
