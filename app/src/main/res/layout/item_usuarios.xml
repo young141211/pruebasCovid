@@ -26,10 +26,13 @@
        </TextView>
    </LinearLayout>
 
-    <ImageView
+    <Switch
         android:id="@+id/eliminar_usuario_item"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="40dp"
-        android:layout_height="40dp"></ImageView>
+        android:layout_width="50dp"
+        android:layout_height="50dp">
+
+    </Switch>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

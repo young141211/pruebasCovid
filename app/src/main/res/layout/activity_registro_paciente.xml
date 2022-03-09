@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registroPaciente">
+
+    <TextView
+        android:id="@+id/titulo_pacientes_registros"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="25dp"
+        android:text="Datos del paciente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <ScrollView
+        app:layout_constraintTop_toBottomOf="@id/titulo_pacientes_registros"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+
+        android:layout_height="0dp">
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:text="CURP"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <EditText
+                android:inputType="text"
+                android:id="@+id/curp_registro_paciente"
+                android:hint="CURP"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+
+            </EditText>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:text="Nombre (s)"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <EditText
+                android:inputType="text"
+                android:id="@+id/nombre_registro_paciente"
+                android:hint="Nombre (s)"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+
+            </EditText>
+
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:text="Apellido paterno"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <EditText
+                android:inputType="text"
+
+                android:id="@+id/ap_paterno_registro_paciente"
+                android:hint="Apellido paterno"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+
+            </EditText>
+
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:text="Apellido materno"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <EditText
+                android:inputType="text"
+
+                android:id="@+id/ap_materno_registro_paciente"
+                android:hint="Apellido materno"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+
+            </EditText>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:text="Fecha de nacimiento"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <Button
+                android:gravity="left|center_vertical"
+                android:id="@+id/btn_fecha_nacimiento_registro_paciente"
+                android:text="DD/mm/aaaa"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+
+            </Button>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:text="Correo"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <EditText
+                android:inputType="textEmailAddress"
+                android:id="@+id/correo_registro_paciente"
+                android:hint="Correo"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+
+            </EditText>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:text="Teléfono"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <EditText
+                android:inputType="number"
+                android:id="@+id/telfono_registro_paciente"
+                android:hint="Teléfono"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+
+            </EditText>
+            <TextView
+                android:layout_marginTop="25dp"
+                android:text="Dirección"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <EditText
+                android:inputType="text"
+                android:gravity="start"
+                android:id="@+id/direccion_registro_paciente"
+                android:lines="6"
+                android:hint="Dirección"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+            </EditText>
+
+
+            <Button
+                android:id="@+id/btn_registro_paciente_registro_paciente"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:text="Guardar"
+                android:background="@color/white"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="30dp"
+                android:layout_width="100dp"
+                android:layout_height="30dp">
+
+            </Button>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

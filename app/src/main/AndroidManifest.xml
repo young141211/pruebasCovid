@@ -12,13 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
+            android:name=".modificacionPrueba"
+            android:exported="false" />
+        <activity
+            android:name=".registroPaciente"
+            android:exported="false" />
+        <activity
+            android:name=".pruebasAplicadas"
+            android:exported="false" />
+        <activity
+            android:name=".editarUsuario"
+            android:exported="false" />
+        <activity
             android:name=".Usuarios"
             android:exported="false" />
         <activity
             android:name=".altaUsuario"
-            android:exported="false" />
-        <activity
-            android:name=".principalUsuario"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

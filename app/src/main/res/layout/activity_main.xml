@@ -48,7 +48,7 @@
 
     </TextView>
     <EditText
-
+        android:id="@+id/pass_login"
         android:textColor="@color/black"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"

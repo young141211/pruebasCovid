@@ -1,7 +1,10 @@
 package com.example.pruebascovid.servicios;
 
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class RetrofitClient {
-    /*private static RetrofitClient instance = null;
+    private static RetrofitClient instance = null;
     private Api myApi;
 
     private RetrofitClient() {
@@ -20,5 +23,5 @@ public class RetrofitClient {
 
     public Api getMyApi() {
         return myApi;
-    }*/
+    }
 }

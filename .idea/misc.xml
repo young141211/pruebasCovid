@@ -7,10 +7,16 @@
         <entry key="..\:/youngsolutions/android/pruebasCovid/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/youngsolutions/android/pruebasCovid/app/src/main/res/layout/activity_principal_usuario.xml" value="0.12182971014492754" />
         <entry key="..\:/youngsolutions/android/pruebasCovid/app/src/main/res/layout/activity_usuarios.xml" value="0.12182971014492754" />
+        <entry key="app/src/main/res/layout/activity_alta_usuario2.xml" value="0.16822916666666668" />
+        <entry key="app/src/main/res/layout/activity_editar_usuario.xml" value="0.12708333333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.30522765598650925" />
         <entry key="app/src/main/res/layout/activity_principal_usuario.xml" value="0.2513586956521739" />
+        <entry key="app/src/main/res/layout/activity_pruebas_aplicadas.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/activity_registro_paciente.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/layout/activity_usuarios.xml" value="0.165" />
         <entry key="app/src/main/res/layout/item_usuarios.xml" value="0.24114583333333334" />
+        <entry key="app/src/main/res/layout/layout_menu_admin.xml" value="0.2391304347826087" />
+        <entry key="app/src/main/res/layout/nav_header.xml" value="0.2484375" />
       </map>
     </option>
   </component>

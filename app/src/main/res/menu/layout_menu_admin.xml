@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_usuarios"
+            android:title="Usuarios" />
+
+
+        <item
+            android:id="@+id/nav_pruebas"
+            android:title="Pruebas" />
+
+
+        <item
+            android:id="@+id/nav_pacientes"
+            android:title="Pacientes" />
+
+        <item
+            android:id="@+id/close_sesion"
+            android:title="Cerrar sesión" />
+
+
+    </group>
+
+
+</menu>

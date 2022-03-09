@@ -1,4 +1,5 @@
 <resources>
+    <string name="empty"></string>
     <string name="app_name">pruebasCovid</string>
     <string name="title_activity_alta_usuario">altaUsuario</string>
     <!-- Strings used for fragments for navigation -->
@@ -14,4 +15,8 @@
         <item>Administrador</item>
         <item>Aplicador</item>
     </string-array>
+    <string name="title_activity_editar_usuario">editarUsuario</string>
+    <string name="title_activity_pruebas_aplicadas">pruebasAplicadas</string>
+    <string name="preference_file_key">sp_prueba_covid</string>
+    <string name="str_session">user_session_pruebas</string>
 </resources>
