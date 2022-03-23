@@ -4,6 +4,9 @@ import com.google.gson.annotations.SerializedName;
 
 public class prueba {
 
+    @SerializedName("idPrueba")
+    private int idPrueba;
+
     @SerializedName("tokenSession")
     private String tokenSession;
 
@@ -28,6 +31,17 @@ public class prueba {
     @SerializedName("usuario_id")
    private int usuario_id;
 
+    @SerializedName("dirigido")
+    private String referido;
+
+    @SerializedName("referencia")
+    private String DirigidoA;
+
+    @SerializedName("metodo")
+    private String metodo;
+
+
+
     public prueba(String tipo, String resultado, String fechaSolicitud, String fechaImpresion, String notas, int paciente_id, int usuario_id) {
         this.tipo = tipo;
         this.resultado = resultado;
@@ -40,7 +54,7 @@ public class prueba {
 
 
     public prueba() {
-        this.tipo = "";
+        this.tipo = "Antigeno";
         this.resultado = "";
         this.fechaSolicitud = "";
         this.fechaImpresion = "";
@@ -113,5 +127,37 @@ public class prueba {
 
     public void setTokenSession(String tokenSession) {
         this.tokenSession = tokenSession;
+    }
+
+    public int getIdPrueba() {
+        return idPrueba;
+    }
+
+    public void setIdPrueba(int idPrueba) {
+        this.idPrueba = idPrueba;
+    }
+
+    public String getReferido() {
+        return referido;
+    }
+
+    public void setReferido(String referido) {
+        this.referido = referido;
+    }
+
+    public String getDirigidoA() {
+        return DirigidoA;
+    }
+
+    public void setDirigidoA(String dirigidoA) {
+        DirigidoA = dirigidoA;
+    }
+
+    public String getMetodo() {
+        return metodo;
+    }
+
+    public void setMetodo(String metodo) {
+        this.metodo = metodo;
     }
 }

@@ -10,7 +10,7 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string-array name="tipo_array">
+    <string-array name="tipo_usuario_array">
         <item>Seleccionar</item>
         <item>Administrador</item>
         <item>Aplicador</item>
@@ -19,4 +19,33 @@
     <string name="title_activity_pruebas_aplicadas">pruebasAplicadas</string>
     <string name="preference_file_key">sp_prueba_covid</string>
     <string name="str_session">user_session_pruebas</string>
+
+
+    <string-array name="resultados_array">
+        <item>Seleccionar</item>
+        <item>Negativo</item>
+        <item>Positivo</item>
+        <item>En espera</item>
+    </string-array>
+
+    <string-array name="valor_referencia_array">
+        <item>Seleccionar</item>
+        <item>Detectado</item>
+        <item>No detectado</item>
+    </string-array>
+
+    <string-array name="metodo_array">
+        <item>Seleccionar</item>
+        <item>Hisopo</item>
+        <item>Serológica (bucal)</item>
+        <item>Sangre</item>
+    </string-array>
+
+
+
+
+
+
+
+
 </resources>

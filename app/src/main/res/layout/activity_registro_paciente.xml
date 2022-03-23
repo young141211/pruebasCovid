@@ -191,10 +191,11 @@
             </TextView>
 
             <EditText
-                android:inputType="text"
-                android:gravity="start"
+
                 android:id="@+id/direccion_registro_paciente"
+                android:inputType="textCapSentences|textMultiLine|textAutoCorrect"
                 android:lines="6"
+                android:gravity="top|left"
                 android:hint="Dirección"
                 android:textColor="@color/black"
                 android:background="@color/white"

@@ -86,6 +86,7 @@ public class Usuarios extends AppCompatActivity implements NavigationView.OnNavi
         navigationView.setNavigationItemSelectedListener(this);
         View header = navigationView.getHeaderView(0);
 
+
         nombreUser = (TextView) header.findViewById(R.id.nombre_user_nav);
         tipoUsuario = (TextView) header.findViewById(R.id.tipo_usuario_nav);
 

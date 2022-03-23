@@ -46,13 +46,14 @@ public interface Api {
     @POST("registroprueba")
     Call<responseAltaPaciente> registroPrueba(@Body prueba jsonObject);
 
+    @POST("updateprueba")
+    Call<responseGeneral> updatePrueba(@Body prueba jsonObject);
+
+    @POST("getprueba")
+    Call<responsePrueba> getPrueba(@Body prueba jsonObject);
+
     @POST("getpruebas")
-    Call<responsePaciente> getPrueba(@Body prueba jsonObject);
-
-
-
-
-
+    Call<responseGetPruebas> getPruebas(@Body Usuario jsonObject);
 
 
 

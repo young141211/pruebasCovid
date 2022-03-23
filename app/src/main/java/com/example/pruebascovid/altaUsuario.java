@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.ArrayMap;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -54,6 +55,9 @@ public class altaUsuario extends AppCompatActivity {
         passConfirm = (EditText) findViewById(R.id.usuario_passConfirm);
         registrar = (Button) findViewById(R.id.btn_registrar);
 
+        ArrayAdapter<String> adapterResultado = new ArrayAdapter<String>(this, R.layout.item_spinner,getResources().getStringArray(R.array.tipo_usuario_array));
+        tipo.setAdapter(adapterResultado);
+
         registrar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if(nombre.getText().toString().isEmpty()){
@@ -65,7 +69,7 @@ public class altaUsuario extends AppCompatActivity {
                 }else if(apMaterno.getText().toString().isEmpty()){
                     Toast toast = Toast.makeText(getApplicationContext(),"Apellido Materno es campo requerido",Toast.LENGTH_LONG);
                     toast.show();
-                }else if(tipo.getSelectedItem().toString().equalsIgnoreCase(getResources().getStringArray(R.array.tipo_array)[0])){
+                }else if(tipo.getSelectedItem().toString().equalsIgnoreCase(getResources().getStringArray(R.array.tipo_usuario_array)[0])){
                     Toast toast = Toast.makeText(getApplicationContext(),"Tipo es campo requerido",Toast.LENGTH_LONG);
                     toast.show();
                 }else if(usuario.getText().toString().isEmpty()){

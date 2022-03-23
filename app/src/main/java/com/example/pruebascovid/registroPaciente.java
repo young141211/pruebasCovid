@@ -140,7 +140,7 @@ public class registroPaciente extends AppCompatActivity {
                         String formatFecha = fecha[2]+"/"+fecha[1]+"/"+fecha[0];
                         fechaNacimiento.setText(formatFecha);
                         pacienteAlta = new paciente();
-                        pacienteAlta.setInPaciente(response.body().getData().getInPaciente());
+                        pacienteAlta.setIdPaciente(response.body().getData().getIdPaciente());
 
                     }
                 }else{
@@ -209,8 +209,14 @@ public class registroPaciente extends AppCompatActivity {
     }
 
     private void btnAltaUSuario(){
-        if (pacienteAlta.getInPaciente() != 0) {
+        if (pacienteAlta.getIdPaciente() != 0) {
             //todo actualizar
+            Log.d("Hugo", "Actualizare "+pacienteAlta.getIdPaciente());
+
+
+
+
+
         }else{
             if(validaUsuario()){
                 paciente paciente = new paciente();
@@ -248,9 +254,7 @@ public class registroPaciente extends AppCompatActivity {
                     if(response.body().code == 200){
                         Log.d("Hugo", "tenmos alta de paciengte y de ");
                         int idPrueba = response.body().data;
-
-
-
+                        goToModificarPrueba(idPrueba);
                     }
                 }else{
 
@@ -293,7 +297,20 @@ public class registroPaciente extends AppCompatActivity {
     private void goToModificarPrueba(int idPrueba){
         Intent intent = new Intent(this,modificacionPrueba.class);
         intent.putExtra("idPrueba", idPrueba);
+        intent.putExtra("nombre_paciente", nombre.getText().toString());
+        intent.putExtra("ap_paterno", apPaterno.getText().toString());
+        intent.putExtra("ap_materno", apMaterno.getText().toString());
+        intent.putExtra("fecha_nacimiento", fechaNacimiento.getText().toString());
         startActivity(intent);
+        finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+
+            Intent intent = new Intent(this,pruebasAplicadas.class);
+            startActivity(intent);
+
         finish();
     }
 }

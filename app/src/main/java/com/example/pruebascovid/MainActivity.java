@@ -2,10 +2,24 @@ package com.example.pruebascovid;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.example.pruebascovid.pojos.Usuario;
+import com.example.pruebascovid.servicios.RetrofitClient;
+import com.example.pruebascovid.servicios.responseLogin;
+import com.google.gson.Gson;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
          sharedPref = getSharedPreferences(
                 getString(R.string.preference_file_key), Context.MODE_PRIVATE);
 
+
+        checkSession();
 
         usuario = (EditText) findViewById(R.id.user_login);
         pass =  (EditText) findViewById(R.id.pass_login);
@@ -106,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this,pruebasAplicadas.class);
             startActivity(intent);
         }
+        finish();
     }
 
 
@@ -115,5 +132,22 @@ public class MainActivity extends AppCompatActivity {
         String json = gson.toJson(user);
         editor.putString(getResources().getString(R.string.str_session), json);
         editor.commit();
+    }
+
+    private void checkSession(){
+        sharedPref = getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        String json = sharedPref.getString(getResources().getString(R.string.str_session), "");
+
+        if (!json.isEmpty()) {
+            Usuario user = new Gson().fromJson(json, Usuario.class);
+            if(user.getTipo().equalsIgnoreCase("Administrador")){
+                Intent intent = new Intent(this,Usuarios.class);
+                startActivity(intent);
+            }else{
+                Intent intent = new Intent(this,pruebasAplicadas.class);
+                startActivity(intent);
+            }
+            finish();
+        }
     }
 }

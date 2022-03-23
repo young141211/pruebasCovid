@@ -1,71 +1,64 @@
 package com.example.pruebascovid.pojos;
 
+import android.os.Build;
+import android.util.Log;
+
+import androidx.annotation.RequiresApi;
+
 import com.google.gson.annotations.SerializedName;
 
+import java.time.LocalDate;
+import java.time.Period;
+
+
 public class paciente {
+
     @SerializedName("idPaciente")
-    private int inPaciente;
+    int idPaciente;
 
     @SerializedName("nombre")
-    private String nombre;
+    String nombre;
 
     @SerializedName("apPaterno")
-    private String apPaterno;
+    String apPaterno;
 
     @SerializedName("apMaterno")
-    private String apMaterno;
+    String apMaterno;
 
     @SerializedName("fechaNacimiento")
-    private String fechaNacimiento;
+    String fechaNacimiento;
 
     @SerializedName("correo")
-    private String correo;
+    String correo;
 
     @SerializedName("telefono")
-    private String telefono;
+    String telefono;
 
     @SerializedName("direccion")
-    private String direccion;
+    String direccion;
 
     @SerializedName("curp")
-    private String curp;
-
-    private prueba prueba;
-
-
-    public paciente(int inPaciente, String nombre, String apPaterno, String apMaterno, String fechaNacimiento, String correo, String telefono, String direccion, String curp, prueba prueba) {
-
-    }
-
+    String curp;
 
     public paciente() {
-        this.inPaciente = 0;
-        this.nombre = "";
-        this.apPaterno = "";
-        this.apMaterno = "";
-        this.fechaNacimiento = "";
-        this.correo = "";
-        this.telefono = "";
-        this.direccion = "";
-        this.curp = "";
-        this.prueba = new prueba();
+        idPaciente=0;
+        nombre = "";
+        apPaterno = "";
+        apMaterno = "";
+        fechaNacimiento = "";
+        correo = "";
+        telefono = "";
+        direccion = "";
+        curp = "";
+
     }
 
-
-    public com.example.pruebascovid.pojos.prueba getPrueba() {
-        return prueba;
+    public int getIdPaciente() {
+        return idPaciente;
     }
 
-    public void setPrueba(com.example.pruebascovid.pojos.prueba prueba) {
-        this.prueba = prueba;
-    }
-
-    public int getInPaciente() {
-        return inPaciente;
-    }
-
-    public void setInPaciente(int inPaciente) {
-        this.inPaciente = inPaciente;
+    public void setIdPaciente(int idPaciente) {
+        this.idPaciente = idPaciente;
     }
 
     public String getNombre() {
@@ -124,6 +117,7 @@ public class paciente {
         this.direccion = direccion;
     }
 
+
     public String getCurp() {
         return curp;
     }
@@ -131,4 +125,14 @@ public class paciente {
     public void setCurp(String curp) {
         this.curp = curp;
     }
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public int getEdad(){
+        Log.d("Hugo",getFechaNacimiento() );
+        String[] fNacimiento = getFechaNacimiento().split("T")[0].split("-");
+        Period edad = Period.between(LocalDate.of(Integer.parseInt(fNacimiento[0]), Integer.parseInt(fNacimiento[1]), Integer.parseInt(fNacimiento[2])), LocalDate.now());
+        return edad.getYears();
+    }
+
+
 }

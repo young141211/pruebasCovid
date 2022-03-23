@@ -10,7 +10,7 @@ import android.util.Log;
 import androidx.annotation.RequiresApi;
 
 import com.example.pruebascovid.R;
-import com.example.pruebascovid.pojos.Paciente;
+import com.example.pruebascovid.pojos.paciente;
 import com.lowagie.text.Document;
 import com.lowagie.text.DocumentException;
 import com.lowagie.text.Element;
@@ -38,9 +38,9 @@ public class pdfGenerator {
     private final static String ETIQUETA_ERROR = "ERROR";
     private Context contexto ;
     private String dirigido,resultado,referencia,metodo,tipo,observaciones,fechaActual,nombreDocumento;
-    private Paciente paciente;
-    public pdfGenerator(Paciente paciente,String dirigido,String resultado,String referencia,String metodo,String tipo,String observaciones, Context contexto) {
-        setPaciente(paciente);
+    private paciente paci;
+    public pdfGenerator(paciente pacie,String dirigido,String resultado,String referencia,String metodo,String tipo,String observaciones, Context contexto) {
+        setPaciente(pacie);
         setDirigido(dirigido);
         setResultado(resultado);
         setReferencia(referencia);
@@ -49,16 +49,16 @@ public class pdfGenerator {
         setObservaciones(observaciones);
         Date myDate = new Date();
         setFechaActual(new SimpleDateFormat("dd/MM/yyyy").format(myDate));
-        setNombreDocumento("Prueba_Covid_"+paciente.getNombre()+"_"+paciente.getApPaterno()+"_"+paciente.getApMaterno()+".pdf");
+        setNombreDocumento("Prueba_Covid_"+pacie.getNombre()+"_"+pacie.getApPaterno()+"_"+pacie.getApMaterno()+".pdf");
         setContexto(contexto);
     }
 
-    public Paciente getPaciente() {
-        return paciente;
+    public paciente getPaciente() {
+        return paci;
     }
 
-    public void setPaciente(Paciente paciente) {
-        this.paciente = paciente;
+    public void setPaciente(paciente paciente) {
+        this.paci= paciente;
     }
 
     public String getDirigido() {
